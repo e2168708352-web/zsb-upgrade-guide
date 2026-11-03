@@ -242,6 +242,20 @@ section{padding:34px 0 6px;scroll-margin-top:54px}
 .method li{margin:7px 0;text-align:justify}
 .method li b{color:var(--ink);font-weight:700}
 
+/* ---------- 官方渠道 ---------- */
+.otwrap{overflow-x:auto;border:1px solid var(--line);margin-top:20px;background:#fff}
+.otable{width:100%;border-collapse:collapse;font-size:13.5px;min-width:660px}
+.otable th{background:#eff3f7;color:var(--ink2);font-weight:700;text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);font-size:13px;white-space:nowrap}
+.otable td{padding:10px 12px;border-bottom:1px solid var(--line2);vertical-align:top;color:var(--ink2)}
+.otable tbody tr:last-child td{border-bottom:0}
+.otable tbody tr:hover{background:#fafbfc}
+.otable td.nm{font-weight:700;color:#26272a;white-space:nowrap}
+.otable td.nm .cn{font-weight:400;font-size:12px;color:var(--faint);display:block}
+.otable .rm{color:var(--muted);font-size:12.5px}
+.otnote{font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.85}
+.weblink{display:inline-flex;align-items:center;gap:6px;font-size:13px}
+.weblink .u{font-family:Consolas,Monaco,monospace;font-size:12px;color:var(--faint)}
+
 footer{margin-top:46px;border-top:3px solid var(--red);background:#eceff3;padding:26px 0 34px}
 footer .wrap{font-size:13px;color:var(--muted)}
 footer b{color:var(--ink2)}
@@ -301,6 +315,7 @@ footer b{color:var(--ink2)}
     <a href="#plan">时间安排</a>
     <a href="#avoid">风险提示</a>
     <a href="#src">文件来源</a>
+    <a href="#official">官方渠道</a>
   </div>
 </nav>
 
@@ -535,6 +550,23 @@ footer b{color:var(--ink2)}
   </div>
 </section>
 
+<!-- ========== 8 官方渠道 ========== -->
+<section id="official">
+  <div class="sec-head"><span class="sec-num">08</span><h2>官方渠道：逐省核对原文的入口</h2></div>
+  <p class="sec-sub">本页所有结论都来自下列机构公开发布的文件。报名、缴费、志愿填报、成绩与录取查询只在这些渠道进行，任何第三方网站、群聊、代办都不具备报名权限。下表为各省教育考试院（招生考试院）与全国性平台的官方网址。</p>
+
+  <div class="otwrap">
+    <table class="otable">
+      <thead>
+        <tr><th>地区</th><th>官方发布机构</th><th>官方网站</th><th>主要用途</th></tr>
+      </thead>
+      <tbody id="otbody"></tbody>
+    </table>
+  </div>
+
+  <p class="otnote">核对方法：进入省教育考试院官网后，在“通知公告”“普通专升本”“招生考试”栏目查找文件名含“专升本考试招生工作”的当年文件；文件名之外，还要看文号与发布日期。院校层面的专业课考纲、参考书、加试要求，只在各校招生章程与教务处网站公布，需逐校查看。若网址无法访问，请从省教育厅官网的“直属单位”入口进入，避免误入仿冒站点。</p>
+</section>
+
 </main>
 
 <footer>
@@ -555,9 +587,10 @@ footer b{color:var(--ink2)}
       </div>
       <div class="fcol fnav">
         <span class="fk">权威渠道</span>
-        <a href="http://www.moe.gov.cn/" target="_blank" rel="noopener">教育部</a>
-        <a href="#src">各省教育考试院</a>
-        <a href="#avoid">政策核对要点</a>
+        <a href="#official">省级考试院官网一览</a>
+        <a href="https://www.moe.gov.cn/" target="_blank" rel="noopener">教育部</a>
+        <a href="https://gaokao.chsi.com.cn/" target="_blank" rel="noopener">阳光高考平台</a>
+        <a href="https://www.chsi.com.cn/" target="_blank" rel="noopener">学信网</a>
       </div>
     </div>
     <div class="disc">数据基准：2026 年各省（市）教育行政部门与教育考试院公开发布的专升本考试招生文件。政策每年调整，具体报名时间、科目分值、招生计划以你报考当年官方最新文件为准。</div>
@@ -670,9 +703,10 @@ const PROVS = [
   vol:'按《河南省普通高校专升本对应专业指导目录》选报专业；艺术类先考专业课',
   free:'退役大学生士兵可选择免试专升本，免于参加全省统一文化课考试，由招生高校按学科大类组建联合考查组进行职业适应性或职业技能综合考查（2026 年 4 月中旬前完成）；荣立个人三等功及以上免考查，按志愿优先录取',
   limit:'河南省普通高校高职（专科）应届毕业生，须在 2026 年 7 月 31 日前取得专科毕业证；在校期间无记过及以上纪律处分（已解除的须提供证明）；免试与统考二者不得兼报',
-  note:'报名时间在考前一年的 10—11 月，是全国最早的省份之一，务必提前一年关注省教育考试院公告',
+  note:'报名时间在考前一年的 10—11 月，是全国最早的省份之一。2027 年文件已于 2026 年 10 月 27 日发布：艺术类网上信息采集 2026 年 10 月 28 日—11 月 3 日，非艺术类 2026 年 11 月 5 日 9:00—11 月 17 日 17:00，文化课考试 2027 年 3 月 20 日，志愿填报与录取在 2027 年 4 月中旬。',
   src:[
     {t:'河南省 2026 年普通高等教育专科层次起点升本科教育招生政策（省教育考试院发布）', o:'河南省教育考试院', d:'2025-10', u:'https://www.haeea.cn/'},
+    {t:'河南省 2027 年普通高等学校专升本考试招生工作实施办法', o:'河南省教育考试院', d:'2026-10-27', u:'https://www.haeea.cn/a/202610/43756_02078f30.shtml'},
     {t:'2026 年郑州市专升本报名工作会议（官方时间安排通报）', o:'郑州市招生考试中心', d:'2025-10-30', u:'https://news.zzedu.net.cn/zzjyxw/10/32295233.shtml'}
   ]
 },
@@ -808,6 +842,31 @@ const MAJORS = [
 ];
 
 /* =========================================================
+   官方渠道数据：各省教育考试院（招生考试院）官网
+   — 用途：① 官方渠道表 ② 省份详情卡“官方网站”一行
+   ========================================================= */
+const OFFICIAL = [
+  {key:'moe', prov:'全国', cn:'教育部', org:'中华人民共和国教育部', url:'https://www.moe.gov.cn/', note:'专升本政策母文件、招生工作通知与专业目录的发布源头'},
+  {key:'chsi', prov:'全国', cn:'阳光高考', org:'教育部阳光高考信息公开平台（学信网）', url:'https://gaokao.chsi.com.cn/', note:'高校招生章程、招生计划、专业库查询；核对院校章程用'},
+  {key:'xl', prov:'全国', cn:'学信网', org:'中国高等教育学生信息网', url:'https://www.chsi.com.cn/', note:'学籍学历查询与认证；专升本入学后的学籍注册在此可查'},
+  {key:'sd', prov:'山东', cn:'山东', org:'山东省教育招生考试院', url:'https://www.sdzk.cn/', note:'专升本报名平台为 zsb.sdzk.cn；政策文件在“普通专升本”栏目'},
+  {key:'js', prov:'江苏', cn:'江苏', org:'江苏省教育考试院', url:'https://www.jseea.cn/', note:'“专转本”专栏；含计算机等级证书与报名条件说明'},
+  {key:'zj', prov:'浙江', cn:'浙江', org:'浙江省教育考试院', url:'https://www.zjzs.net/', note:'“普通专升本”栏目；报名在浙江省教育考试院网站服务系统'},
+  {key:'gd', prov:'广东', cn:'广东', org:'广东省教育考试院', url:'https://eea.gd.gov.cn/', note:'“专插本”（普通专升本）专栏；含户籍与社保年限要求'},
+  {key:'ah', prov:'安徽', cn:'安徽', org:'安徽省教育招生考试院', url:'https://www.ahzsks.cn/', note:'“专升本”栏目；公共课与专业课考试说明在此发布'},
+  {key:'fj', prov:'福建', cn:'福建', org:'福建省教育考试院', url:'https://www.eeafj.cn/', note:'“专升本”专栏；报名、现场确认与类别对照表'},
+  {key:'hn', prov:'河南', cn:'河南', org:'河南省教育考试院', url:'https://www.haeea.cn/', note:'另设河南招生考试信息网 heao.com.cn；报名平台 pzwb.haeea.cn'},
+  {key:'hb', prov:'湖北', cn:'湖北', org:'湖北省教育考试院', url:'https://www.hbea.edu.cn/', note:'“普通专升本”专栏；含举办高校名单与计划'},
+  {key:'hun', prov:'湖南', cn:'湖南', org:'湖南省教育考试院', url:'https://www.hneao.edu.cn/', note:'另设湖南招生考试信息港 hneeb.cn；志愿与录取信息在此公布'},
+  {key:'sc', prov:'四川', cn:'四川', org:'四川省教育考试院', url:'https://www.sceea.cn/', note:'“普通高校专升本”栏目；含考试科目与大纲'},
+  {key:'he', prov:'河北', cn:'河北', org:'河北省教育考试院', url:'https://www.hebeea.edu.cn/', note:'“专升本”栏目；含报名与资格审核通知'},
+  {key:'sn', prov:'陕西', cn:'陕西', org:'陕西省教育考试院', url:'https://www.sneea.cn/', note:'另设陕西招生考试信息网 sneac.com；专业对应目录在此'},
+  {key:'jx', prov:'江西', cn:'江西', org:'江西省教育考试院', url:'https://www.jxeea.cn/', note:'“专升本”专栏；含 9 个招考类别与对应专业指导目录'},
+  {key:'cq', prov:'重庆', cn:'重庆', org:'重庆市教育考试院', url:'https://www.cqksy.cn/', note:'“专升本”栏目；含统一选拔考试与退役士兵政策'}
+];
+const OFF = key => OFFICIAL.find(o=>o.key===key);
+
+/* =========================================================
    渲染：省份
    ========================================================= */
 const plistEl = document.getElementById('plist');
@@ -838,8 +897,12 @@ function selectProv(id){
 function renderDetail(){
   const p = PROVS.find(x=>x.id===curProv);
   if(!p) return;
+  const o = OFF(p.id);
   const subjHtml = p.subj.map(s=>`<li>${s}</li>`).join('');
   const srcHtml = p.src.map(s=>`<li><a href="${s.u}" target="_blank" rel="noopener">${s.t}</a><span class="no">　${s.o}${s.d?' · '+s.d:''}</span></li>`).join('');
+  const webHtml = o
+    ? `<a class="weblink" href="${o.url}" target="_blank" rel="noopener">${o.org} ↗<span class="u">${o.url.replace(/^https?:\/\//,'').replace(/\/$/,'')}</span></a><br><span class="no">${o.note}</span>`
+    : `<span class="no">暂未收录，请从本省教育厅官网“直属单位”入口进入。</span>`;
   pdetailEl.innerHTML = `
     <div class="d-head">
       <div class="top">
@@ -855,6 +918,7 @@ function renderDetail(){
       </div>
     </div>
     <div class="d-body">
+      <div class="row"><div class="k">官方网站</div><div class="v">${webHtml}</div></div>
       <div class="row"><div class="k">考试科目</div><div class="v"><ul>${subjHtml}</ul></div></div>
       <div class="row"><div class="k">志愿设置</div><div class="v">${p.vol}</div></div>
       <div class="row"><div class="k">免试 / 专项</div><div class="v">${p.free}</div></div>
@@ -1078,6 +1142,23 @@ srcWrap.innerHTML = `
       <ol>${p.src.map(s=>`<li><a href="${s.u}" target="_blank" rel="noopener">${s.t}</a><span class="meta">${s.o}${s.d?' · '+s.d:''}</span></li>`).join('')}</ol>
     </div>`).join('')}
 `;
+
+/* =========================================================
+   渲染：官方渠道表
+   ========================================================= */
+(function(){
+  const tb = document.getElementById('otbody');
+  if(!tb) return;
+  tb.innerHTML = OFFICIAL.map(o=>{
+    const host = o.url.replace(/^https?:\/\//,'').replace(/\/$/,'');
+    return `<tr>
+      <td class="nm">${o.prov}${o.cn && o.cn!==o.prov ? `<span class="cn">${o.cn}</span>` : ''}</td>
+      <td>${o.org}</td>
+      <td><a href="${o.url}" target="_blank" rel="noopener">${host}</a></td>
+      <td class="rm">${o.note}</td>
+    </tr>`;
+  }).join('');
+})();
 
 /* =========================================================
    导航高亮
