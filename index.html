@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专升本政策查询服务网 · 专科毕业生升学政策文件汇编</title>
+<meta name="description" content="依据教育部高校学生司及14个省级教育考试院公开发布的专升本考试招生文件，提供路径判断、报名时间、考试科目、免试条件、专业对照与三年规划时间表查询。">
+<style>
+:root{
+  --ink:#1f1f1f; --ink2:#35393d; --muted:#5b6570; --faint:#8b949c;
+  --paper:#f2f4f7; --card:#ffffff; --line:#d5dbe1; --line2:#e8ecf0;
+  --primary:#15558f; --primary-soft:#eaf2fa;
+  --red:#9b1a1f; --red2:#b7222a;
+  --accent:#9b1a1f; --accent-soft:#fbeeee;
+  --ok:#1a6b3c; --ok-soft:#e8f3ec;
+  --warn:#8a5a00; --warn-soft:#fdf3dc;
+  --radius:2px;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Source Han Sans SC",system-ui,sans-serif;
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.4;margin:0;font-weight:700;letter-spacing:0}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* ---------- 顶部条 ---------- */
+.govbar{background:#8f161b;color:#f2dedf;font-size:12.5px;border-bottom:2px solid #7d1116}
+.govbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:34px;flex-wrap:wrap}
+.govbar .gl{letter-spacing:.02em}
+.govbar .gr{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.govbar a{color:#f2dedf}
+.govbar .date{color:#e4b7b9}
+
+/* ---------- 站头 ---------- */
+.sitehead{background:#fff;border-bottom:1px solid var(--line)}
+.sitehead .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:22px;padding-bottom:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.emblem{
+  flex:0 0 auto;width:56px;height:56px;border-radius:50%;
+  background:radial-gradient(circle at 50% 32%,#c22b30,#8f161b 78%);
+  color:#fff;display:grid;place-items:center;font-size:23px;font-weight:700;font-family:"SimSun","Songti SC",serif;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.28);
+}
+.brand h1{font-size:clamp(20px,2.3vw,28px);color:#26272a;letter-spacing:.03em;font-family:"Microsoft YaHei","PingFang SC",sans-serif}
+.brand .sub{font-size:12.5px;color:var(--muted);letter-spacing:.1em;margin-top:4px}
+.headmeta{flex:0 1 320px;min-width:240px}
+.searchbox{display:flex;border:1px solid var(--primary);background:#fff}
+.searchbox input{flex:1;min-width:0;border:0;outline:0;font:inherit;font-size:13.5px;padding:8px 11px;color:var(--ink);background:#fff}
+.searchbox input::placeholder{color:#a4acb4}
+.searchbox button{border:0;background:var(--primary);color:#fff;font:inherit;font-size:13.5px;padding:0 16px;cursor:pointer}
+.searchbox button:hover{background:#0f4472}
+.headmeta .upd{font-size:12px;color:var(--faint);margin-top:7px;text-align:right}
+
+/* ---------- 导航 ---------- */
+nav.tabs{position:sticky;top:0;z-index:40;background:var(--red);border-bottom:3px solid #7d1116;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+nav.tabs .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+nav.tabs .wrap::-webkit-scrollbar{display:none}
+nav.tabs a{
+  flex:0 0 auto;padding:12px 21px;font-size:15px;color:#fff;border:0;white-space:nowrap;font-weight:500
+}
+nav.tabs a:hover{background:#b7222a;text-decoration:none}
+nav.tabs a.on{background:#fff;color:var(--red);font-weight:700}
+
+/* ---------- 导语 + 通知公告 ---------- */
+.hero{background:#fff;border-bottom:1px solid var(--line)}
+.hgrid{display:grid;grid-template-columns:1.38fr .82fr;gap:30px;padding:26px 20px 26px;align-items:start}
+@media(max-width:880px){.hgrid{grid-template-columns:1fr;gap:20px}}
+.htitle{font-size:clamp(19px,2.2vw,25px);color:var(--red);border-left:4px solid var(--red);padding-left:12px;line-height:1.4}
+.lede{margin-top:14px;font-size:14.5px;color:var(--ink2);line-height:1.9}
+.lede strong{color:var(--red);font-weight:700}
+.stats{display:flex;flex-wrap:wrap;margin-top:18px;border-top:1px solid var(--line2);border-left:1px solid var(--line2)}
+.stat{flex:1 1 25%;min-width:130px;padding:10px 12px;background:#fafbfc;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.stat b{display:block;font-size:21px;color:var(--primary);font-variant-numeric:tabular-nums;line-height:1.3}
+.stat span{font-size:12px;color:var(--muted);line-height:1.5;display:block}
+.hnotice{background:#fafbfc;border:1px solid var(--line)}
+.nh{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#eff3f7;border-bottom:1px solid var(--line);padding:9px 13px;font-size:14.5px;font-weight:700;color:#2b2c2f}
+.nh .more{font-size:12px;font-weight:400;color:var(--faint)}
+.hnotice ul{list-style:none;margin:0;padding:4px 0}
+.hnotice li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 13px;border-bottom:1px dashed var(--line2);font-size:13.5px}
+.hnotice li:last-child{border-bottom:0}
+.hnotice li a{color:var(--ink2);display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hnotice li a:hover{color:var(--red);text-decoration:underline}
+.hnotice li em{font-style:normal;color:var(--faint);font-size:12px;flex:0 0 auto}
+.hnotice .nfoot{padding:8px 13px;border-top:1px solid var(--line2);font-size:12px;color:var(--muted);background:#fff}
+
+/* ---------- 区块 ---------- */
+section{padding:34px 0 6px;scroll-margin-top:54px}
+.sec-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.sec-num{font-size:12px;font-weight:700;color:#fff;background:var(--red);padding:1px 7px;letter-spacing:.06em}
+.sec-head h2{font-size:clamp(18px,2.1vw,22px);color:#26272a}
+.sec-sub{color:var(--muted);font-size:13.5px;max-width:920px;margin-top:10px;line-height:1.85;text-align:justify}
+.sec-sub b{color:var(--ink2);font-weight:700}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:none}
+.pad{padding:20px}
+
+/* ---------- 四条路径 ---------- */
+.paths{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:20px;border:1px solid var(--line);background:#fff}
+@media(max-width:980px){.paths{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.paths{grid-template-columns:1fr}}
+.path{position:relative;padding:18px 16px 16px;background:#fff;border-right:1px solid var(--line2);display:flex;flex-direction:column;gap:10px}
+.path:last-child{border-right:0}
+@media(max-width:980px){.path:nth-child(2n){border-right:0}}
+.path.main{background:#f7fbfe;border-top:3px solid var(--primary);padding-top:16px}
+.path .tagline{font-size:11.5px;font-weight:700;letter-spacing:.1em;color:var(--faint)}
+.path.main .tagline{color:var(--primary)}
+.path h3{font-size:16.5px;color:#26272a}
+.path .alias{font-size:12.5px;color:var(--faint)}
+.path ul{margin:0;padding-left:17px;font-size:13.5px;color:var(--ink2);line-height:1.75}
+.path li{margin:3px 0}
+.path .badge{margin-top:auto;font-size:12px;padding:6px 10px;background:var(--ok-soft);color:var(--ok);font-weight:700;text-align:center;border:1px solid #cbe3d5}
+.path .badge.mid{background:var(--warn-soft);color:var(--warn);border-color:#eddfb4}
+
+/* ---------- 自测 ---------- */
+.checker{display:grid;grid-template-columns:1.15fr .85fr;gap:0;margin-top:20px;overflow:hidden}
+@media(max-width:860px){.checker{grid-template-columns:1fr}}
+.qbox{padding:22px;border-right:1px solid var(--line2)}
+@media(max-width:860px){.qbox{border-right:0;border-bottom:1px solid var(--line2)}}
+.q{margin-bottom:18px}
+.q:last-child{margin-bottom:0}
+.q .label{font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:8px}
+.q .label i{font-style:normal;color:var(--faint);font-weight:400}
+.opts{display:flex;flex-wrap:wrap;gap:7px}
+.opt{
+  font:inherit;font-size:13px;padding:7px 13px;cursor:pointer;border-radius:2px;
+  background:#fff;border:1px solid var(--line);color:var(--ink2);transition:.13s;
+}
+.opt:hover{border-color:var(--primary);color:var(--primary);background:#f7fbff}
+.opt[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.result{padding:22px;background:#fafbfc}
+.result h4{font-size:12.5px;letter-spacing:.1em;color:var(--faint);font-weight:700;margin-bottom:12px}
+.pick{border-left:3px solid var(--red);padding-left:13px;margin-bottom:16px}
+.pick .k{font-size:12px;color:var(--muted);font-weight:700}
+.pick .v{font-size:17px;font-weight:700;line-height:1.45;color:var(--red)}
+.pick .n{font-size:13px;color:var(--muted);margin-top:4px}
+.todo{list-style:none;margin:0;padding:0;font-size:13.5px}
+.todo li{display:flex;gap:8px;padding:6px 0;border-top:1px dashed var(--line2);color:var(--ink2)}
+.todo li:first-child{border-top:0}
+.todo li span.n{flex:0 0 18px;height:18px;border-radius:50%;background:var(--red);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;margin-top:4px}
+.flagnote{margin-top:14px;font-size:12.5px;background:var(--warn-soft);color:#6d4700;padding:10px 12px;border-left:3px solid #d9a520}
+
+/* ---------- 省份 ---------- */
+.prov-wrap{display:grid;grid-template-columns:250px 1fr;gap:16px;margin-top:20px;align-items:start}
+@media(max-width:880px){.prov-wrap{grid-template-columns:1fr}}
+.prov-list{background:var(--card);border:1px solid var(--line);overflow:hidden}
+.prov-list .search{padding:10px;border-bottom:1px solid var(--line2);background:#fafbfc}
+.prov-list input{
+  width:100%;font:inherit;font-size:13.5px;padding:8px 11px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:2px;
+}
+.prov-list input:focus{outline:0;border-color:var(--primary);box-shadow:0 0 0 2px rgba(21,85,143,.12)}
+.grid-p{display:grid;grid-template-columns:repeat(2,1fr);gap:0;max-height:420px;overflow:auto;padding:6px}
+@media(max-width:880px){.grid-p{max-height:none;grid-template-columns:repeat(4,1fr)}}
+@media(max-width:520px){.grid-p{grid-template-columns:repeat(3,1fr)}}
+.pbtn{
+  font:inherit;font-size:13.5px;padding:9px 8px;margin:2px;border:1px solid transparent;
+  background:transparent;color:var(--ink2);cursor:pointer;text-align:center;transition:.12s;
+}
+.pbtn:hover{background:#eef2f6;border-color:var(--line)}
+.pbtn[aria-selected="true"]{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+.pbtn.hide{display:none}
+.detail{background:var(--card);border:1px solid var(--line);overflow:hidden}
+.d-head{padding:18px 20px 16px;border-bottom:1px solid var(--line2);background:#f7f9fb;border-top:3px solid var(--primary)}
+.d-head .top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.d-head h3{font-size:20px;color:#26272a}
+.chip{font-size:11.5px;padding:2px 9px;background:var(--primary-soft);color:var(--primary);font-weight:700;border:1px solid #cfe0f0}
+.chip.gray{background:#f0f2f5;color:var(--muted);border-color:var(--line)}
+.d-head .term{font-size:12.5px;color:var(--muted);margin-top:6px}
+.kpis{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.kpi{flex:1 1 140px;background:#fff;border:1px solid var(--line2);padding:9px 12px}
+.kpi .k{font-size:11.5px;color:var(--faint);font-weight:700;letter-spacing:.04em}
+.kpi .v{font-size:14px;font-weight:700;margin-top:2px;line-height:1.5;color:var(--ink2)}
+.d-body{padding:6px 20px 20px}
+.row{display:grid;grid-template-columns:100px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line2);font-size:14px}
+.row:last-of-type{border-bottom:0}
+.row .k{font-size:12.5px;font-weight:700;color:var(--muted);padding-top:2px}
+.row .v{color:var(--ink2);text-align:justify}
+.row .v ul{margin:0;padding-left:17px}
+.row .v li{margin:2px 0}
+.srcbox{margin-top:14px;background:#fafbfc;border:1px solid var(--line2);border-left:3px solid #c8d3dd;padding:12px 14px}
+.srcbox .t{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);margin-bottom:8px}
+.srcbox ol{margin:0;padding-left:18px;font-size:13px;color:var(--ink2)}
+.srcbox li{margin:5px 0}
+.srcbox .no{color:var(--faint);font-size:12px}
+.emptynote{font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.7}
+
+/* ---------- 专业 ---------- */
+.major-wrap{display:grid;grid-template-columns:270px 1fr;gap:16px;margin-top:20px;align-items:start}
+@media(max-width:880px){.major-wrap{grid-template-columns:1fr}}
+.mlist{background:var(--card);border:1px solid var(--line);padding:8px;display:flex;flex-direction:column;gap:2px;max-height:460px;overflow:auto}
+.mbtn{font:inherit;font-size:13.5px;text-align:left;padding:9px 12px;border:0;background:transparent;color:var(--ink2);cursor:pointer}
+.mbtn:hover{background:#eef2f6}
+.mbtn[aria-pressed="true"]{background:var(--primary);color:#fff;font-weight:700}
+.mout{background:var(--card);border:1px solid var(--line);padding:22px;min-height:280px}
+.mout h4{font-size:18px;margin-bottom:4px;color:#26272a}
+.mout .lead{font-size:13.5px;color:var(--muted);margin-bottom:16px}
+.mgroup{margin-bottom:14px}
+.mgroup .gk{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tagp{font-size:13px;padding:4px 11px;background:#f3f5f8;color:var(--ink2);border:1px solid var(--line2)}
+.warnline{margin-top:16px;font-size:13px;background:var(--accent-soft);color:#7a2020;padding:11px 13px;border-left:3px solid var(--red)}
+
+/* ---------- 时间表 ---------- */
+.plan-ctl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:20px;padding:12px 14px;background:#fafbfc;border:1px solid var(--line)}
+.plan-ctl select{font:inherit;font-size:14px;padding:7px 11px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:2px}
+.tl{margin-top:18px;position:relative;padding-left:26px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:#d8e0e8}
+.tli{position:relative;padding:0 0 20px 0}
+.tli::before{content:"";position:absolute;left:-24px;top:7px;width:11px;height:11px;border-radius:50%;background:#fff;border:2.5px solid var(--primary)}
+.tli.key::before{background:var(--red);border-color:var(--red)}
+.tli .when{font-size:12px;font-weight:700;color:var(--primary);letter-spacing:.04em}
+.tli.key .when{color:var(--red)}
+.tli .what{font-size:14.5px;font-weight:700;margin-top:1px;color:#26272a}
+.tli .how{font-size:13px;color:var(--muted);margin-top:2px;text-align:justify}
+
+/* ---------- 避坑 ---------- */
+.avoid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+@media(max-width:760px){.avoid{grid-template-columns:1fr}}
+.av{padding:16px 18px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red)}
+.av h4{font-size:14.5px;margin-bottom:5px;color:#26272a}
+.av p{font-size:13px;color:var(--muted);text-align:justify}
+.av p b{color:var(--ink2);font-weight:700}
+
+/* ---------- 来源 ---------- */
+.srcs{margin-top:20px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:820px){.srcs{grid-template-columns:1fr}}
+.sbox{padding:16px 18px;background:var(--card);border:1px solid var(--line)}
+.sbox .h{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:700;margin-bottom:8px;color:#26272a}
+.sbox .h .n{font-size:11.5px;color:#fff;background:var(--red);padding:1px 7px;font-weight:700}
+.sbox ol{margin:0;padding-left:18px;font-size:13px;color:var(--ink2)}
+.sbox li{margin:6px 0}
+.sbox .meta{color:var(--faint);font-size:12px;display:block}
+.method{background:#fafbfc;border:1px solid var(--line);border-top:3px solid var(--primary);padding:20px 22px;margin-top:18px}
+.method h4{font-size:15px;margin-bottom:10px;color:#26272a}
+.method ol{margin:0;padding-left:20px;font-size:14px;color:var(--ink2)}
+.method li{margin:7px 0;text-align:justify}
+.method li b{color:var(--ink);font-weight:700}
+
+footer{margin-top:46px;border-top:3px solid var(--red);background:#eceff3;padding:26px 0 34px}
+footer .wrap{font-size:13px;color:var(--muted)}
+footer b{color:var(--ink2)}
+.tiny{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.8}
+.disc{margin-top:8px;padding:12px 14px;background:#fff;border:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.fgrid{display:grid;grid-template-columns:1.6fr .7fr .7fr;gap:26px;padding-bottom:18px;border-bottom:1px solid #d5dbe1}
+@media(max-width:820px){.fgrid{grid-template-columns:1fr;gap:16px}}
+.fcol b{font-size:14.5px;color:var(--ink2)}
+.fmeta{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.8}
+.fnav{display:flex;flex-direction:column;gap:5px;font-size:13px;align-items:flex-start}
+.fk{font-size:12px;font-weight:700;color:var(--faint);letter-spacing:.08em;margin-bottom:2px}
+@media(max-width:640px){
+  .headmeta{flex:1 1 100%;min-width:0}
+  .headmeta .upd{text-align:left}
+  .sitehead .wrap{padding-top:16px;padding-bottom:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="govbar">
+  <div class="wrap">
+    <span class="gl">政策文件汇编 · 内容依据教育部高校学生司及各省教育考试院公开发布文件</span>
+    <span class="gr">
+      <a href="#src">文件来源</a>
+      <a href="#avoid">风险提示</a>
+      <span class="date">2026年11月3日 星期二</span>
+    </span>
+  </div>
+</div>
+
+<header class="sitehead">
+  <div class="wrap">
+    <div class="brand">
+      <div class="emblem">专</div>
+      <div>
+        <h1>专升本政策查询服务网</h1>
+        <p class="sub">专科毕业生升学政策 · 官方文件汇编与规划指引</p>
+      </div>
+    </div>
+    <div class="headmeta">
+      <form class="searchbox" id="qform" onsubmit="return false">
+        <input id="qinput" type="search" placeholder="输入省份或关键词，如：湖北 报名时间">
+        <button type="submit" id="qbtn">检索</button>
+      </form>
+      <p class="upd">数据截止 2026 年 11 月 · 已录入 14 个省级行政区细则</p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="栏目导航">
+  <div class="wrap">
+    <a href="#path" class="on">政策解读</a>
+    <a href="#check">资格自测</a>
+    <a href="#prov">省级文件</a>
+    <a href="#major">专业对照</a>
+    <a href="#plan">时间安排</a>
+    <a href="#avoid">风险提示</a>
+    <a href="#src">文件来源</a>
+  </div>
+</nav>
+
+<section class="hero" aria-label="导语与通知公告">
+  <div class="wrap hgrid">
+    <div>
+      <h2 class="htitle">专科生升学政策查询与三年规划指引</h2>
+      <p class="lede">本栏目依据<strong>教育部高校学生司及省级教育考试院公开发布的文件</strong>整理，只呈现文件中明确写出的规则：先判断你适用哪条升学路径，再查你所在省份的报名时间、考试科目、免试条件与志愿规则，最后倒推出一份可按月执行的三年准备时间表。每条结论均标注文件名称、文号或发布机构，便于逐条核对原文。</p>
+      <div class="stats">
+        <div class="stat"><b>14</b><span>省级行政区细则已录入</span></div>
+        <div class="stat"><b>2026</b><span>政策基准年度</span></div>
+        <div class="stat"><b>4</b><span>升学路径对照</span></div>
+        <div class="stat"><b>19</b><span>专科专业大类</span></div>
+      </div>
+    </div>
+    <div class="hnotice">
+      <div class="nh"><span>通知公告</span><span class="more">共 4 条</span></div>
+      <ul>
+        <li><a href="#prov">2027 年专升本报名陆续启动，河南本月开网</a><em>11-03</em></li>
+        <li><a href="#plan">三年制 2025 级：考试在 2028 年 3 月</a><em>11-03</em></li>
+        <li><a href="#path">四条路径中学历性质差异说明</a><em>11-02</em></li>
+        <li><a href="#src">国家层面依据：教学司函〔2025〕53 号</a><em>11-01</em></li>
+      </ul>
+      <div class="nfoot">下一轮政策文件自 2026 年 11 月起陆续发布，请以报考当年文件为准。</div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+
+<!-- ========== 1 四条路径 ========== -->
+<section id="path">
+  <div class="sec-head"><span class="sec-num">01</span><h2>先分清：四条路，只有一条是全日制</h2></div>
+  <p class="sec-sub">社会上所有“专升本”说法都能归到这四类。它们的<b>学历性质、学习形式、拿到的证书</b>完全不同，报错方向会浪费一整年。</p>
+
+  <div class="paths">
+    <article class="path main">
+      <div class="tagline">路径 A · 唯一全日制</div>
+      <h3>普通高校专升本</h3>
+      <div class="alias">各省叫法：专升本 / 专转本（江苏）/ 专插本（广东旧称）/ 专接本（河北旧称）</div>
+      <ul>
+        <li>省内统一考试或“公共课统考+高校自命题”</li>
+        <li>入学后进本科三年级，学制 2 年（5 年制专业 3 年）</li>
+        <li>毕业证标注“在本校××专业专科起点本科学习”</li>
+        <li>全日制在校就读，不得转专业、转学</li>
+      </ul>
+      <div class="badge">普通高等教育 · 全日制在校 2 年</div>
+    </article>
+
+    <article class="path">
+      <div class="tagline">路径 B · 非全日制</div>
+      <h3>自学考试专升本</h3>
+      <div class="alias">自考本科 / 专本衔接</div>
+      <ul>
+        <li>无入学考试，按专业考试计划逐科参加统考</li>
+        <li>全部课程合格后申请毕业，符合条件可申请学位</li>
+        <li>学习形式自主，可在专科在读期间并行准备</li>
+        <li>属于成人高等教育范畴，非全日制</li>
+      </ul>
+      <div class="badge mid">非全日制 · 与统招不冲突</div>
+    </article>
+
+    <article class="path">
+      <div class="tagline">路径 C · 非全日制</div>
+      <h3>成人高考专升本</h3>
+      <div class="alias">成考 / 函授 / 业余</div>
+      <ul>
+        <li>参加全国成人高校招生统一考试</li>
+        <li>学习形式为函授、业余等，非全日制</li>
+        <li>一般面向已取得专科毕业证者</li>
+        <li>入学后按成人高等教育学籍管理</li>
+      </ul>
+      <div class="badge mid">非全日制 · 适合在职</div>
+    </article>
+
+    <article class="path">
+      <div class="tagline">路径 D · 非全日制</div>
+      <h3>开放大学专升本</h3>
+      <div class="alias">原广播电视大学</div>
+      <ul>
+        <li>注册入学，不参加全国统一入学考试</li>
+        <li>远程与面授结合，非全日制</li>
+        <li>适合已工作、需要学历通道的人</li>
+        <li>学历国家承认，学信网可查</li>
+      </ul>
+      <div class="badge mid">非全日制 · 门槛最低</div>
+    </article>
+  </div>
+
+  <div class="method" style="margin-top:16px">
+    <h4>三条所有省份通用的规则（来自省级文件原文）</h4>
+    <ol>
+      <li><b>“专升本”是统称，不是学历性质。</b>只有路径 A（普通高校专升本）是全日制；机构宣传里“包录取的专升本”多为路径 B/C/D，务必看毕业证类型。</li>
+      <li><b>毕业证会写明专科起点。</b>湖北、江西、重庆等省文件均明确：毕业证书标注“在本校××专业专科起点本科学习”，学习时间按实际填写。</li>
+      <li><b>入学后不能转专业、转学，也不能改成非全日制就读。</b>选专业这一步等于定终身方向，不要抱着“进去再换”的打算。</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== 2 资格自测 ========== -->
+<section id="check">
+  <div class="sec-head"><span class="sec-num">02</span><h2>我到底能走哪条路？</h2></div>
+  <p class="sec-sub">四个问题，直接给出主推路径和接下来 30 天该做的事。判断依据是各省文件中关于<b>招生对象</b>与<b>免试条件</b>的表述。</p>
+
+  <div class="card checker">
+    <div class="qbox" id="qbox">
+      <div class="q" data-q="grade">
+        <div class="label">1 · 你现在大几 <i>（决定还有几次机会）</i></div>
+        <div class="opts">
+          <button class="opt" data-v="1">大一</button>
+          <button class="opt" data-v="2">大二</button>
+          <button class="opt" data-v="3">大三 / 应届毕业</button>
+          <button class="opt" data-v="0">已经毕业</button>
+        </div>
+      </div>
+      <div class="q" data-q="sys">
+        <div class="label">2 · 你的专科学制</div>
+        <div class="opts">
+          <button class="opt" data-v="3">三年制</button>
+          <button class="opt" data-v="2">两年制（3+2 / 五年一贯制后段）</button>
+        </div>
+      </div>
+      <div class="q" data-q="id">
+        <div class="label">3 · 你的身份 <i>（涉及免试政策）</i></div>
+        <div class="opts">
+          <button class="opt" data-v="normal">普通应届专科生</button>
+          <button class="opt" data-v="vet">退役大学生士兵</button>
+          <button class="opt" data-v="skill">省级以上技能大赛获奖</button>
+          <button class="opt" data-v="base">三支一扶 / 西部计划服务期满</button>
+        </div>
+      </div>
+      <div class="q" data-q="goal">
+        <div class="label">4 · 你的目标</div>
+        <div class="opts">
+          <button class="opt" data-v="full">必须要全日制本科</button>
+          <button class="opt" data-v="work">边工作边提升学历</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="result" id="result" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ========== 3 省份政策库 ========== -->
+<section id="prov">
+  <div class="sec-head"><span class="sec-num">03</span><h2>你所在省份，规则差得很远</h2></div>
+  <p class="sec-sub">同样是专升本：山东考 4 门公共课共 400 分，福建考 3+1 门共 600 分，江苏满分 500 分还要计算机等级证书。下面是<b>逐条从省级官方文件摘录</b>的细则，点击省份查看。</p>
+
+  <div class="prov-wrap">
+    <div class="prov-list">
+      <div class="search"><input id="psearch" type="search" placeholder="搜索省份，如 广东" aria-label="搜索省份"></div>
+      <div class="grid-p" id="plist" role="tablist" aria-label="省份列表"></div>
+    </div>
+    <div class="detail" id="pdetail"></div>
+  </div>
+
+  <div class="method">
+    <h4>没收录的省份，用这三步自查（10 分钟搞定）</h4>
+    <ol>
+      <li><b>第一步，看省教育厅官网。</b>搜“省教育厅 + 专升本 + 年份”，找到《关于做好××年普通高等学校专升本考试招生工作的通知》这类红头文件——这是最权威的母文件。</li>
+      <li><b>第二步，看省教育考试院。</b>报名时间、考试科目、志愿设置、录取控制线通常在这里发布；报名入口也只在这里。</li>
+      <li><b>第三步，看目标本科院校的招生章程。</b>专业课考什么、参考书、专业对照限制、加试要求，只写在院校章程里，省文件不会替你写。</li>
+    </ol>
+    <p class="emptynote">称谓提醒：江苏叫“专转本”，广东过去叫“专插本”，河北过去叫“专接本”，其余多数省份叫“专升本”。搜不到时换这几个词再搜一次。</p>
+  </div>
+</section>
+
+<!-- ========== 4 专业对照 ========== -->
+<section id="major">
+  <div class="sec-head"><span class="sec-num">04</span><h2>我这个专业，能升到哪些本科专业</h2></div>
+  <p class="sec-sub">按《职业教育专业目录（2021年）》的 <b>19 个专业大类</b>整理。真正的报考资格以你所在省当年发布的《本专科专业对应指导目录》为准，这里给的是方向，不是承诺。</p>
+
+  <div class="major-wrap">
+    <div class="mlist" id="mlist" role="group" aria-label="专科专业大类"></div>
+    <div class="mout" id="mout"></div>
+  </div>
+</section>
+
+<!-- ========== 5 时间表 ========== -->
+<section id="plan">
+  <div class="sec-head"><span class="sec-num">05</span><h2>倒推三年：每个月该干什么</h2></div>
+  <p class="sec-sub">选你的入学年份，自动生成从入学到本科报到的完整节点。<b>红色节点</b>是不能错过的硬期限——错过报名一般没有补报名。</p>
+
+  <div class="plan-ctl">
+    <label for="yselect" style="font-size:13.5px;color:var(--muted)">入学年份</label>
+    <select id="yselect"></select>
+    <label for="sselect" style="font-size:13.5px;color:var(--muted)">学制</label>
+    <select id="sselect"><option value="3">三年制</option><option value="2">两年制</option></select>
+    <span id="examHint" style="font-size:13px;color:var(--faint)"></span>
+  </div>
+
+  <div class="card pad" style="margin-top:16px">
+    <div class="tl" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ========== 6 避坑 ========== -->
+<section id="avoid">
+  <div class="sec-head"><span class="sec-num">06</span><h2>十个高频坑，每条都有文件依据</h2></div>
+  <p class="sec-sub">下面这些不是“经验之谈”，是各省文件里明确写的禁止条款和限制条件。</p>
+
+  <div class="avoid">
+    <div class="av"><h4>1 · “内部指标、包过、保录取”</h4><p>湖北文件明确：<b>严禁以任何形式委托任何个人、社会机构参与专升本工作</b>，并会同有关部门治理培训机构虚假宣传、价格欺诈、组织作弊。凡承诺“包过”的，本身就是违规证据。</p></div>
+    <div class="av"><h4>2 · 把自考/成考说成“统招专升本”</h4><p>只有普通高校专升本是全日制。浙江、四川等省文件均写明<b>考生不得跨省重复报名</b>，学历注册也只有一条记录，事后无法“换成统招”。</p></div>
+    <div class="av"><h4>3 · 以为可以考很多次</h4><p>多数省份只面向<b>应届专科毕业生</b>；湖北明确“符合条件的考生只能参加一次普通专升本考试（含已录取未报到、延期毕业考生）”；湖南把“上年度已报名参加过普通计划考试”列为不得报名情形。</p></div>
+    <div class="av"><h4>4 · 忽略纪律处分与挂科</h4><p>河南要求“在校学习期间无记过及以上纪律处分”；重庆要求受处分者须在报名前<b>正式书面解除</b>，有重修/补考的须在考试前全部合格。处分没解除，报名系统直接卡住。</p></div>
+    <div class="av"><h4>5 · 拿不到专科毕业证</h4><p>湖北、江西等省明确：应届考生在当年 7 月 31 日前未取得专科毕业证书的，<b>取消录取资格</b>。考上也可能白考。</p></div>
+    <div class="av"><h4>6 · 跨专业乱报</h4><p>湖南、陕西、浙江均要求按《专业对应（指导）目录》报考，“填报专业不符合目录要求的为无效志愿”；医学类更严，山东引教高〔2014〕7号要求<b>医学类专业须保持相同</b>。</p></div>
+    <div class="av"><h4>7 · 只盯着“能不能考”，不看执业资格</h4><p>湖南、江西文件提示：专升本学习年限或本专科专业不一致，可能导致<b>毕业后不能报考医师、护士等执业资格</b>。临床、口腔、中医、护理尤其要提前确认。</p></div>
+    <div class="av"><h4>8 · 退役士兵免试当成“随便上”</h4><p>免的是文化课，不是考核：多数省要参加<b>综合考查/职业技能测试</b>（湖北、河南、福建、陕西均有明文），且录取后不报到、自行放弃的，此后不再享受免试政策（湖北、福建）。</p></div>
+    <div class="av"><h4>9 · 忘记报名前置条件</h4><p>江苏要求取得<b>全国计算机等级考试一级及以上证书</b>（省高校计算机等级考试一级视同）；广东要求体检表、户籍连续年限或社保记录。这些都要提前几个月准备。</p></div>
+    <div class="av"><h4>10 · 用“专升本”名义改户籍</h4><p>广东为打击“考试移民”，要求往届生<b>户籍连续满 3 年</b>（未满 3 年须在粤参加高考且报名时为广东户籍）。临时迁户口换考区，通常直接失去资格。</p></div>
+  </div>
+</section>
+
+<!-- ========== 7 来源 ========== -->
+<section id="src">
+  <div class="sec-head"><span class="sec-num">07</span><h2>这个网站的内容是从哪来的</h2></div>
+  <p class="sec-sub">全部结论都能追到下面这些文件。国家层面的母文件是教育部高校学生司《关于做好 2026 年普通高等学校专升本考试招生工作的通知》<b>（教学司函〔2025〕53 号）</b>，各省文件均以此为依据制定。</p>
+
+  <div class="srcs" id="srclist"></div>
+
+  <div class="method">
+    <h4>使用这份资料的三个前提</h4>
+    <ol>
+      <li><b>基准年度是 2026 年。</b>2026 年招录已结束，本站录入的是最近一个完整年度的官方文件，用于判断规则结构与时间规律。下一轮（2027 年）文件自 2026 年 11 月起陆续发布，河南等省份报名甚至就在 11 月——请以你报考当年的文件为准。</li>
+      <li><b>每年会变。</b>科目分值微调、院校停招增招、专项计划增减都很常见。正文里凡是写“以省考试院另行公告为准”的地方，就是当年文件未明确、需要你二次核对的点。</li>
+      <li><b>本站不代替院校章程。</b>专业课考纲、参考书、加试、身体条件限制，只在各校招生章程里，务必逐校阅读。</li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol">
+        <b>专升本政策查询服务网</b>
+        <p class="fmeta">内容整理：个人学习者 · 依据公开文件汇编 · 更新至 2026 年 11 月</p>
+        <p class="fmeta">本站为政策信息整理工具，<b>非政府部门官方网站</b>，不提供培训、代报名服务，不作任何录取承诺。</p>
+      </div>
+      <div class="fcol fnav">
+        <span class="fk">栏目导航</span>
+        <a href="#path">政策解读</a>
+        <a href="#prov">省级文件</a>
+        <a href="#major">专业对照</a>
+        <a href="#plan">时间安排</a>
+        <a href="#src">文件来源</a>
+      </div>
+      <div class="fcol fnav">
+        <span class="fk">权威渠道</span>
+        <a href="http://www.moe.gov.cn/" target="_blank" rel="noopener">教育部</a>
+        <a href="#src">各省教育考试院</a>
+        <a href="#avoid">政策核对要点</a>
+      </div>
+    </div>
+    <div class="disc">数据基准：2026 年各省（市）教育行政部门与教育考试院公开发布的专升本考试招生文件。政策每年调整，具体报名时间、科目分值、招生计划以你报考当年官方最新文件为准。</div>
+    <div class="tiny">录入范围：山东、江苏、浙江、广东、安徽、福建、河南、湖北、湖南、四川、河北、陕西、江西、重庆 共 14 省（市）细则；其余省份提供自查路径。文件名称、文号、发布机构已逐条核对，摘录内容保留原文表述。</div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   数据：省份细则（逐条摘自官方文件）
+   ========================================================= */
+const PROVS = [
+{
+  id:'sd', name:'山东', term:'普通高等教育专科升本科（统考）',
+  reg:'2026 年 3 月 11 日—13 日（每日 9:00—17:00），平台 zsb.sdzk.cn',
+  exam:'2026 年 3 月 28 日—29 日',
+  total:'400 分',
+  subj:['英语 100 分（专科期间公共外语非英语的考生考政治）','计算机 100 分','大学语文 100 分','高等数学 100 分（分Ⅰ/Ⅱ/Ⅲ卷）'],
+  vol:'最多 70 个“专业+院校”平行志愿，按建档立卡批、校荐生批、自荐生批分别填报',
+  free:'退役大学生士兵免文化课统考，参加招生高校综合考查；荣立个人三等功及以上可免考查；世界技能大赛等国家级以上赛事获奖者可申请“大赛保送生”',
+  limit:'山东省内普通高校应届专科毕业生；医学类专业须与专科专业相同（教高〔2014〕7 号）；报考专业对应的《高等数学》科目须一致，确定后不得更改',
+  note:'资格分四类：校荐生（综合素质测评成绩排名同年级同专业前 60%，或获省级以上技能大赛奖项）、自荐生（须通过招生高校专业测试）、建档立卡家庭考生、大赛保送生',
+  src:[
+    {t:'关于做好 2026 年普通高等教育专科升本科考试招生工作的通知', o:'山东省教育厅、省征兵办、省退役军人事务厅', d:'2025-11-26', u:'http://edu.shandong.gov.cn/art/2025/11/26/art_107093_10343914.html'},
+    {t:'关于做好山东省 2026 年普通高等教育专科升本科招生考试报名工作的通知', o:'山东省教育招生考试院', d:'2025-12', u:'https://www.sdzk.cn/NewsInfo.aspx?NewsID=7118'},
+    {t:'山东省 2026 年普通高等教育专科升本科招生考试公共基础课考试要求', o:'山东省教育招生考试院', d:'2025-11', u:'http://www.sdzk.cn/Floadup/file/20251129/6389999945835892448300421.pdf'}
+  ]
+},
+{
+  id:'js', name:'江苏', term:'普通高等学校“专转本”',
+  reg:'2026 年 1 月上旬（退役大学生士兵报名在 2026 年 4 月），具体时间由省教育考试院公布',
+  exam:'2026 年 3 月 21 日',
+  total:'500 分',
+  subj:['大学语文 或 高等数学 150 分','英语 或 日语 120 分','专业综合 230 分（专业基础理论 150 分 + 操作技能 80 分）'],
+  vol:'按报考类别设平行院校志愿，每生最多填报 8 所院校的 8 个专业',
+  free:'退役大学生士兵免于参加文化课考试，须参加接收院校组织的职业技能综合考查；获省职业院校技能大赛一等奖或国赛二等奖以上等，可录取本科，但仍须参加全省统一“专转本”考试',
+  limit:'江苏省内普通高职（专科）应届毕业生，能正常毕业；须取得全国计算机等级考试一级及以上证书（江苏省高校计算机等级考试一级及以上视同符合）',
+  note:'选拔对象分三类：普通高职（专科）学生（全省统考）、五年一贯制高职（高师）学生（接收院校组织考试）、退役大学生士兵（免文化课）。自 2027 年起不再安排“专转本”专项招生计划（原建档立卡专项）',
+  src:[
+    {t:'省教育厅关于做好 2026 年普通高等学校“专转本”工作的通知', o:'江苏省教育厅', d:'2025-12-15', u:'https://jyt.jiangsu.gov.cn/art/2025/12/15/art_58320_11691183.html'},
+    {t:'江苏省 2026 年普通高校“专转本”考试报名（三年制、五年一贯制）日程', o:'江苏省教育考试院', d:'2025-12', u:'https://www.jseea.cn/'}
+  ]
+},
+{
+  id:'zj', name:'浙江', term:'选拔高职高专毕业生进入本科学习（普通专升本）',
+  reg:'2026 年 3 月 14 日 9 时—18 日 17 时（报名与填报志愿同时进行），报名费 110 元/人次',
+  exam:'2026 年 4 月 18 日（上午 9:00—11:30 高等数学/大学语文；下午 14:30—17:00 英语）',
+  total:'300 分',
+  subj:['文史、法学、教育、艺术类：大学语文 150 分 + 英语 150 分','理工、经管、农学、医学类：高等数学 150 分 + 英语 150 分'],
+  vol:'可填报 8 个志愿，每个志愿为 1 所高校 + 1 个专业；只能选择 1 个招考类别，跨类别填报无效',
+  free:'退役大学生士兵免试专升本单独报名（2026 年 3 月 14 日 9 时—16 日 17 时），最多 3 个院校志愿、每校不超过 3 个专业志愿',
+  limit:'浙江省全日制高职高专应届毕业；按《浙江省专升本各类别所含专业对照表》确定招考类别（文史、理工、经管、法学、教育、农学、医学、艺术 8 类）；不得跨省重复报名',
+  note:'英语不作为全省统一报考条件，但招生高校可提出能力等级要求并在招生计划中公布；学校不设单科成绩要求。医学、护理类的报考要求与学制由招生高校按教育部和行业要求设定',
+  src:[
+    {t:'浙江省 2026 年选拔高职高专毕业生进入本科学习实施细则', o:'浙江省教育考试院', d:'2026-03', u:'https://www.zjzs.net/art/2026/3/14/art_31_12127.html'},
+    {t:'2026 年浙江省普通高校专升本报名提醒（含免试专升本安排）', o:'浙江省教育考试院', d:'2026-03-14', u:'https://www.zjzs.net/art/2026/3/14/art_31_12127.html'}
+  ]
+},
+{
+  id:'gd', name:'广东', term:'普通高等学校专升本（原“专插本”）',
+  reg:'2026 年 1 月 12 日 9:00—19 日 18:00 网上预报名，1 月 23 日 17:00 前缴费；报考费 40 元/科',
+  exam:'2026 年 3 月 28 日（周六）—29 日（周日）',
+  total:'按省统考 4 门合计（公共课与专业基础课各 100 分，专业综合课 200 分）',
+  subj:['公共课 2 门：政治理论、英语（各 100 分 / 120 分钟）','专业基础课 1 门：按本科专业所属 12 个学科门类设置（100 分 / 120 分钟）','专业综合课 1 门：省统考或院校自命题（200 分 / 150 分钟，设计基础 210 分钟）'],
+  vol:'设提前批（职教师资）、普通批、建档立卡批三个批次，录取顺序为提前批→普通批→建档立卡批',
+  free:'退役大学生士兵可申请免文化课考试专升本（办法见粤招办普〔2025〕50 号）',
+  limit:'广东户籍应届专科毕业生；非广东户籍但在广东高校就读的应届专科毕业生；广东户籍往届生须户籍连续满 3 年（未满 3 年须在粤参加普通高考且报名时为广东户籍）。非应届在校生、停考期内人员不得报考',
+  note:'报考职教师资专业须在志愿填报前取得对应中级及以上职业资格技能等级证书；非全日制学历考生还需在广东缴纳基本医疗+基本养老保险累计满 1 年',
+  src:[
+    {t:'广东省 2026 年普通高等学校专升本招生工作规定', o:'广东省教育考试院', d:'2025-12', u:'https://eea.gd.gov.cn/ptgk/content/post_4802291.html'},
+    {t:'广东省 2026 年普通专升本热点问答', o:'广东省教育考试院', d:'2025-12', u:'https://eea.gd.gov.cn/ptgk/content/post_4802291.html'}
+  ]
+},
+{
+  id:'ah', name:'安徽', term:'普通高校专升本（省统考 + 院校专业课）',
+  reg:'2026 年 3 月 23 日 10:00—3 月 27 日 17:00（zsbbm.ahzsks.cn）；资格审核截止 3 月 28 日 12:00，缴费截止 3 月 29 日 17:00',
+  exam:'2026 年 4 月 18 日（大学语文/高等数学 9:00—11:00；英语 14:00—15:30）；专业课考试时间由招生院校确定',
+  total:'600 分',
+  subj:['公共课 2 门（各 150 分，省考试院统考）：文科考大学语文+英语，理科考高等数学+英语','专业课 2 门（各 150 分，招生院校自主命题或联合命题）'],
+  vol:'志愿信息一经提交不得更改；分 A、B 段及免文化课考试退役士兵专项计划',
+  free:'在安徽应征入伍、退役后继续完成高职学业的，可填报免文化课考试退役士兵专项计划；服役期间荣立三等功以上可享免试就学；获世界职业院校技能大赛二等奖及以上、中国国际大学生创新大赛二等奖及以上、中华人民共和国职业技能大赛铜牌及以上可享免试就学；获省赛一等奖/国赛三等奖可免公共课考试、面试通过直接录取',
+  limit:'安徽省省属普通高校（含经批准举办普通高等职业教育的成人高校）应届全日制普通高职（专科）毕业生；在安徽省应征入伍的具有普通高职（专科）学历的退役士兵',
+  note:'报名费 120 元/生；公共课按文、理、艺术、体育类分别划定合格线，单科过低会直接失去投档资格',
+  src:[
+    {t:'安徽省 2026 年普通高校专升本考试招生工作安排', o:'安徽省教育招生考试院', d:'2026-01', u:'https://www.ahzsks.cn/zyyx/8648.htm'},
+    {t:'安徽省 2026 年普通高校专升本公共课考试说明', o:'安徽省教育招生考试院', d:'2026-01', u:'https://www.ahzsks.cn/ggl/7760.htm'}
+  ]
+},
+{
+  id:'fj', name:'福建', term:'普通高校专升本（公共基础课 + 专业基础课）',
+  reg:'2025 年 12 月 21 日—25 日网上报名（www.eeafj.cn），12 月 26 日—30 日现场确认；报名考试费 140 元/人',
+  exam:'2026 年 3 月 28 日—29 日',
+  total:'600 分',
+  subj:['公共基础课 3 门（各 100 分 / 120 分钟）','专业基础课 1 门（300 分 / 150 分钟）'],
+  vol:'分 7 个报考类别：文史哲法类、教育类、理工类、农林生物医药类、医学类、经管类、艺术类，考生只能报考 1 个类别',
+  free:'退役大学生士兵免文化课考试，须参加招生院校联合命题的职业技能综合考查（150 分，2026 年 3 月 29 日 14:30—16:30）；荣立个人三等功以上可免考查并优先录取；获奖考生单独组织录取，按文化课总分与获奖等级赋分各占 50% 计算综合分',
+  limit:'福建省内普通高校全日制高职（专科）应届毕业生；医学类须为医学相关专业应届毕业生，艺术类须为艺术相关专业；本科高校在校生、非应届在校生、停考期内人员不得报名',
+  note:'命题依据《福建省普通高校专升本考试说明》（闽教学〔2022〕37 号）及 2023 年修订版（闽教考〔2023〕11 号）；2026 年 3 月退役士兵不再单独补报名',
+  src:[
+    {t:'关于做好 2026 年普通高校专升本考试招生报名工作的通知（闽招委〔2025〕12 号）', o:'福建省高等学校招生委员会、福建省教育厅', d:'2025-12-17', u:'https://www.eeafj.cn/gkzsb/20251217/14340.html'},
+    {t:'2026 年普通高校专升本考试 12 月 21 日起网上报名（政策解读）', o:'福建省教育厅', d:'2025-12-18', u:'https://jyt.fujian.gov.cn/gzcy/rdhy/202512/t20251218_7047942.html'}
+  ]
+},
+{
+  id:'hn', name:'河南', term:'普通高等教育专科层次起点升本科教育（专升本）',
+  reg:'艺术类 2025 年 10 月 28 日 9:00—11 月 3 日 17:00；非艺术类 2025 年 11 月 5 日 9:00—11 月 17 日 17:00；省内往届及省外应往届退役士兵 2026 年 3 月 11 日—15 日',
+  exam:'2026 年 3 月 21 日（英语 9:00—11:30；专业综合 15:00—17:00）',
+  total:'300 分',
+  subj:['英语 150 分（公共英语或专业英语）','专业综合 150 分（体、音、舞、美专业为专业加试）'],
+  vol:'按《河南省普通高校专升本对应专业指导目录》选报专业；艺术类先考专业课',
+  free:'退役大学生士兵可选择免试专升本，免于参加全省统一文化课考试，由招生高校按学科大类组建联合考查组进行职业适应性或职业技能综合考查（2026 年 4 月中旬前完成）；荣立个人三等功及以上免考查，按志愿优先录取',
+  limit:'河南省普通高校高职（专科）应届毕业生，须在 2026 年 7 月 31 日前取得专科毕业证；在校期间无记过及以上纪律处分（已解除的须提供证明）；免试与统考二者不得兼报',
+  note:'报名时间在考前一年的 10—11 月，是全国最早的省份之一，务必提前一年关注省教育考试院公告',
+  src:[
+    {t:'河南省 2026 年普通高等教育专科层次起点升本科教育招生政策（省教育考试院发布）', o:'河南省教育考试院', d:'2025-10', u:'https://www.haeea.cn/'},
+    {t:'2026 年郑州市专升本报名工作会议（官方时间安排通报）', o:'郑州市招生考试中心', d:'2025-10-30', u:'https://news.zzedu.net.cn/zzjyxw/10/32295233.shtml'}
+  ]
+},
+{
+  id:'hb', name:'湖北', term:'普通高等学校专升本（英语统考 + 院校专业课）',
+  reg:'普通考生及专项计划考生 2026 年 3 月 10 日—13 日（zsb.e21.cn）；退役大学生士兵 2 月 25 日—28 日预报名、3 月 10 日—13 日填报志愿；技能大赛免试考生 2 月 25 日—28 日',
+  exam:'2026 年 4 月 17 日（公共课英语 9:00—11:00；专业课及退役士兵综合考查同日由高校安排）',
+  total:'公共课英语省统考 + 高校自命题专业课（分值由各校确定）',
+  subj:['公共课：英语（全省统一命题、统一考试、统一评卷）','专业课：招生高校自主确定，封闭集中入闱命题'],
+  vol:'每生限报一所高校的一个专业；专项计划考生先录取，未被录取可参加普通考生录取；第一轮未录取可参加补录',
+  free:'退役大学生士兵免文化课考试，参加高校组织的综合考查，荣立三等功及以上可免考查；技能大赛免试考生（世界技能大赛参赛选手、中华人民共和国职业技能大赛优胜奖及以上、全国职业院校技能大赛三等奖/世界职业院校技能大赛铜奖及以上、湖北省职业院校技能大赛一等奖）经审核公示后直接免试录取',
+  limit:'2026 年湖北省普通高校全日制高职（专科）应届毕业生；报考专业须与专科专业“相同或相近”；48 所省属普通本科高校招生；所有科目不得设置选择题、判断题',
+  note:'学制 2 年或 3 年，不得采取非全日制形式就读，入学后不得转专业和转学；毕业证标注“在本校××专业专科起点本科学习”。专项计划面向经省农业农村厅确认的原建档立卡及防返贫监测家庭学生',
+  src:[
+    {t:'关于做好 2026 年湖北省普通高等学校专升本工作的通知', o:'湖北省教育厅', d:'2026-01-23', u:'https://jyt.hubei.gov.cn/'},
+    {t:'湖北省 2026 年普通高校专升本招生工作网址及咨询电话（48 所高校名单）', o:'湖北省教育厅', d:'2026-01', u:'https://jyt.hubei.gov.cn/'}
+  ]
+},
+{
+  id:'hun', name:'湖南', term:'普通高等学校专升本考试招生',
+  reg:'2026 年 3 月上旬登录“湖南省普通高等学校专升本考试信息管理平台”报名；首次志愿 3 月下旬填报；考试费 130 元/生',
+  exam:'2026 年 4 月中下旬（普通计划统一安排）',
+  total:'2 门公共科目 + 1 门专业综合（分值由招生高校在章程中公布）',
+  subj:['公共科目（省统考，从大学语文、高等数学、大学英语中选 2 门）','专业综合科目（1 门，招生高校自命题或联合命题）','艺术、体育类可增设专业技能加试'],
+  vol:'首次志愿只能填 1 个“院校+专业”；普通计划 5 月下旬设一次征集志愿，最多 5 个平行志愿；免试计划单独填报',
+  free:'免试计划分两类：退役军人大学生免试计划（我省专科毕业生应征入伍并退役者等三类）、竞赛获奖学生免试计划（世界技能大赛、全国职业院校技能大赛一至三等奖、中国国际大学生创新大赛金奖银奖等），两类只能选一类',
+  limit:'湖南省 2026 届普通高校全日制专科毕业生（以学信网电子注册信息为准）；在校及入伍期间受记过及以上处分未解除者不得报名；上年度已报名参加过普通计划考试的不得报名',
+  note:'42 所院校招生；入学后进入本科三年级，学制 2 年（本科 5 年制专业 3 年），不得转专业、转学、不得非全日制就读。脱贫家庭毕业生单列脱贫计划',
+  src:[
+    {t:'湖南省教育厅关于做好 2026 年湖南省普通高等学校专升本考试招生工作的通知（湘教发〔2026〕5 号）', o:'湖南省教育厅', d:'2026-01-27', u:'https://jyt.hunan.gov.cn/jyt/sjyt/xxgk/tzgg/202602/t20260203_1173627.html'},
+    {t:'湖南省 2026 年普通高等学校专升本考试招生工作实施方案（附件，含对应专业指导目录）', o:'湖南省教育厅', d:'2026-01-27', u:'https://www.hunan.gov.cn/hnszf/szf/hnzb_18/2026/202604/szfbmwj_98721_88_1urmmqrurrdbvpccutqhrmsteguugvmdqkupkguegktvspfmfnnccnmvnkhnueqhqrmcrunhkbqgcqshkecsrgbnercksgkvunnqqdp/202602/t20260228_33923270.html'}
+  ]
+},
+{
+  id:'sc', name:'四川', term:'普通高等学校专升本（三类考生 + 全省统考）',
+  reg:'2026 年 1 月 5 日—11 日（每日 9:00—22:00），四川省教育考试院官网；报名考试费 80 元/生',
+  exam:'2026 年 4 月 16 日—17 日（退役大学生士兵职业适应性综合考查 4 月 16 日 9:00—11:00）',
+  total:'450 分',
+  subj:['理工农医类：高等数学 150 分 + 大学英语 150 分 + 计算机基础 150 分','非理工农医类：大学语文 150 分 + 大学英语 150 分 + 计算机基础 150 分'],
+  vol:'按免试生批、原建档立卡贫困家庭毕业生批、普通考生批顺序录取，实行平行志愿投档',
+  free:'退役大学生士兵免于参加统一考试，须参加省教育考试院统一组织的职业适应性综合考查；2026 年春季退役错过报名的可于 2026 年 3 月 9 日—11 日补报名；获奖免试生按专业对应关系向一所院校一个专业提出免试申请（2026 年 3 月 15 日前）',
+  limit:'四川省内普通高校全日制普通高职（专科）应届毕业生，学习成绩优良（专业成绩要求由生源院校按川教函〔2021〕37 号确定）；考生类别分普通考生、原建档立卡贫困家庭毕业生、获奖免试生、退役大学生士兵 4 种，报名时选定后不得更改',
+  note:'考试类别与科目按《四川省 2026 年普通高校专升本本专科专业对应指导目录》确定；命题依据《四川省教育厅关于印发四川省 2024 年普通高校专升本考试要求的通知》',
+  src:[
+    {t:'四川省 2026 年普通高等学校专升本考试招生工作实施规定', o:'四川省教育考试院', d:'2025-12', u:'https://www.sceea.cn/Html/202512/Newsdetail_4597.html'},
+    {t:'四川省 2026 年普通高校专升本考试报名通告', o:'四川省教育考试院', d:'2025-12', u:'https://www.sceea.cn/Html/202512/Newsdetail_4595.html'}
+  ]
+},
+{
+  id:'he', name:'河北', term:'普通高等学校专升本（公共文化 + 专业综合考核）',
+  reg:'应届毕业生、技能拔尖人才：2026 年 3 月 4 日 9 时—16 日 17 时；基层服务项目人员、原建档立卡考生、退役大学生士兵：3 月 4 日 9 时—8 日 17 时报名，3 月 11 日 17 时后查审核结果，16 日 17 时前缴费',
+  exam:'2026 年 4 月 18 日（政治 9:00—10:00；英语 10:15—11:15；专业考核科目 2 14:00—15:30；科目 1 15:45—17:15，书法/美术至 17:45）',
+  total:'500 分',
+  subj:['公共文化考试：政治 100 分 + 英语 100 分','专业综合考核：专业考核科目 1（150 分）+ 专业考核科目 2（150 分）'],
+  vol:'拟于 5 月中下旬发布志愿填报及录取安排；技能拔尖人才计划单列、单独录取',
+  free:'退役大学生士兵（不含个人三等功及以上）免政治、英语，仅参加专业考核两科；荣立个人三等功及以上者全部免考',
+  limit:'招生对象 5 类：应届高职（专科）毕业生、基层服务项目人员、原建档立卡贫困家庭应届毕业生、退役大学生士兵、技能拔尖人才；须按《本专科专业（类）对照表》选报专业',
+  note:'科目设置依据《河北省教育厅关于优化调整河北省普通专升本考试科类及科目设置的通知》（冀教学〔2023〕19 号）；报名时选定专业后系统自动对应“联考专业”，志愿阶段可在联考专业内填报',
+  src:[
+    {t:'2026 年河北省普通高等学校专升本考试报考公告', o:'河北省教育考试院', d:'2025-12-29', u:'https://www.hebeea.edu.cn/c/2025-12-29/490706.html'},
+    {t:'2026 年河北省普通专升本报考问答', o:'河北省教育考试院', d:'2026-02-26', u:'https://www.hebeea.edu.cn/c/2026-02-26/491935.html'}
+  ]
+},
+{
+  id:'sn', name:'陕西', term:'普通高等学校专升本（在校生 / 退役士兵免试生 / 非免试生）',
+  reg:'2026 年 3 月 9 日 9:00—3 月 11 日 18:00 网上报名；信息采集及资格审查 3 月 9 日—13 日；缴费 3 月 9 日—14 日 12:00；退役士兵资格初审 3 月 2 日—6 日',
+  exam:'2026 年 4 月 11 日',
+  total:'300 分（退役士兵免试生为职业技能综合测试 200 分）',
+  subj:['文史、医学、艺术类：大学英语 150 分 + 大学语文 150 分（各 150 分钟）','理工类：大学英语 150 分 + 高等数学 150 分','退役大学生士兵免试生：职业技能综合测试（笔试 150 分钟，200 分，不指定教材）'],
+  vol:'设退役大学生士兵免试生志愿、专项计划志愿、普通专业志愿，符合条件的考生在相应栏填报，最多可填报 10 个学校',
+  free:'退役大学生士兵免试生免全省统考及专业课考核，须参加职业技能综合测试；退役大学生士兵非免试生免专业课考核、参加全省统考；可自愿放弃免试参加统考，但不得兼报',
+  limit:'陕西省内 2026 年普通高职（专科）应届毕业生（在校生）；在校生须参加生源学校组织的专业课考核且成绩合格；报考专业须符合《2026 年陕西省普通高等学校专升本考试专业对应目录》',
+  note:'招生计划实行“先报名、后编制”；专项计划面向原建档立卡贫困家庭高职毕业生；文化课各专业录取最低控制线由省教材及招生委员会办公室按计划和成绩划定，专项计划、职业教育本科专业单独划线',
+  src:[
+    {t:'2026 年陕西省普通高等学校专升本考试招生工作实施办法', o:'陕西省教育考试院', d:'2026-03', u:'https://www.sneea.cn'},
+    {t:'陕西招生考试信息网 · 专升本报名系统与专业对应目录', o:'陕西省教育考试院', d:'2026-03', u:'https://www.sneac.com'}
+  ]
+},
+{
+  id:'jx', name:'江西', term:'普通高校专升本（公共基础课综合卷 + 专业基础课）',
+  reg:'2026 年 1 月 6 日 9:00—11 日 17:00 网上报名；志愿填报与缴费 2026 年 3 月 6 日 9:00—9 日 17:00（报名费 130 元/人）',
+  exam:'2026 年 3 月 29 日（公共基础课 9:00—11:30；专业基础及技能知识课 15:00—17:00）',
+  total:'450 分',
+  subj:['公共基础课：“政治+英语+信息技术”综合卷，300 分（不分学科专业，全体考生同卷）','专业基础及技能知识课：按 9 个招考类别各考 1 门，150 分'],
+  vol:'分 4 个录取批次：免试计划（2 个梯度院校志愿 + 1 个征集，每校 6 个专业志愿）、大国工匠培养强基工程专项计划、其他专项计划（20 平行 + 10 征集）、普通计划（40 平行 + 20 征集），均为“院校+专业”模式',
+  free:'退役大学生士兵免试计划，免于参加统一考试，由招生高校组织校内考查（2026 年 3 月 7 日—11 日）；获奖学生（含高水平运动员）、脱贫家庭学生可报专项计划',
+  limit:'江西省 2026 年普通高校高职（专科）应届毕业生，2026 年 7 月 31 日前可取得专科毕业证；在校期间无记过及以上纪律处分或报名前已解除；须对照《江西省 2026 年普通高校专升本对应专业（类）指导目录》填报',
+  note:'9 个招考类别：文史哲、经济、法学、教育、理工、农医药、医学、管理、艺术。录取按类别分别划定全省最低录取控制分数线，总分相同则专业基础课优先',
+  src:[
+    {t:'关于做好全省 2026 年普通高校专升本考试招生工作的通知', o:'江西省教育考试院', d:'2026-01', u:'http://www.jxeea.cn/jxsjyksy/gsgg91/content/content_2016676953959960576.html'},
+    {t:'江西省 2026 年普通高等学校专升本考试招生实施方案（赣教职成字〔2025〕33 号）', o:'江西省教育厅', d:'2025-12', u:'http://www.jxeea.cn/'},
+    {t:'关于做好江西省 2026 年普通高校专升本考试报名工作的通知（赣考院普〔2025〕22 号）', o:'江西省教育考试院', d:'2025-12', u:'http://www.jxeea.cn/'}
+  ]
+},
+{
+  id:'cq', name:'重庆', term:'普通高校专升本统一考试招生',
+  reg:'2026 年 1 月 19 日 10:00—1 月 26 日 17:00；第二阶段 2 月 26 日 10:00—3 月 9 日 17:00；院校确认截止 3 月 10 日 17:00；报名费 140 元/生',
+  exam:'2026 年 3 月下旬或 4 月上旬（全市统一考试）',
+  total:'360 分',
+  subj:['文科类：计算机基础 + 大学英语 + 大学语文（各 120 分）','理科类：计算机基础 + 大学英语 + 高等数学（各 120 分）','技术技能要求较高的院校可组织专业加试，加试成绩占总成绩比例不超过 30%'],
+  vol:'按普通文科、普通理工科、计算机、英语、艺体五大专业类别实行平行志愿投档；总分相同依次比较英语、计算机单科成绩',
+  free:'退役大学生士兵、相关技能竞赛获奖学生免于参加全市统一文化课考试（办法见渝教学发〔2026〕1 号）',
+  limit:'2026 年 9 月 1 日前能获得毕业证书的重庆市普通高职（专科）应届毕业生（含高职扩招、“三二分段制”“五年一贯制”贯通培养学生）；参加“三支一扶”、西部计划等服务期满考核合格后 2 年内的往届毕业生可按应届生待遇报考；在校期间受处分的须在报名前书面解除，有重修/补考的须在考试前全部合格',
+  note:'“专本贯通”转段考核合格的高职应届毕业生原则上不纳入专升本考试招生范围；“专升本”学生除不得转学转专业外，日常管理与毕业待遇与同校同专业本科生一致',
+  src:[
+    {t:'2026 年重庆市普通高校专升本统一考试招生工作实施方案（渝教学发〔2026〕2 号）', o:'重庆市教育委员会', d:'2026-01-08', u:'https://www.cq.gov.cn/ywdt/bmts/202601/t20260109_15304788.html'},
+    {t:'2026 年重庆市普通高校专升本统一考试报名公告', o:'重庆市教育考试院', d:'2026-01-16', u:'https://www.cqksy.cn/web/article/2026-01/16/content_6871.html'}
+  ]
+}
+];
+
+/* ============ 专业大类 ============ */
+const MAJORS = [
+  {k:'农林牧渔大类', dirs:{'农学':'植物生产类、自然保护与环境生态类','工学/理学':'林学类、水产类、动物生产类、动物医学类','管理学':'农业经济管理类、工商管理类'}, note:'部分省份对涉农专业有单独计划或降分政策，报考前查本省对应目录。'},
+  {k:'资源环境与安全大类', dirs:{'工学':'地质类、矿业类、测绘类、环境科学与工程类、安全科学与工程类','理学':'地理科学类'}, note:'安全工程、环境工程是常见对口方向，注意部分院校要求专科为同一专业类。'},
+  {k:'能源动力与材料大类', dirs:{'工学':'能源动力类、材料类、电气类、自动化类'}, note:'新能源材料、储能方向近年新增较多，以院校当年招生专业为准。'},
+  {k:'土木建筑大类', dirs:{'工学':'土木类、建筑类、水利类、测绘类','管理学':'管理科学与工程类（工程管理、工程造价）'}, note:'建筑学、城乡规划学制可能为 3 年，报考前确认学制与执业资格考试要求。'},
+  {k:'水利大类', dirs:{'工学':'水利类、土木类、环境科学与工程类'}, note:'水利水电工程、水文与水资源工程为常见对口专业。'},
+  {k:'装备制造大类', dirs:{'工学':'机械类、电气类、自动化类、仪器类、材料类'}, note:'机械设计制造及其自动化、电气工程及其自动化是报考人数最多的方向之一，竞争激烈。'},
+  {k:'生物与化工大类', dirs:{'工学':'化工与制药类、生物工程类、材料类','理学':'生物科学类、化学类'}, note:'部分省份要求专科与本科同属一个专业类，跨类填报可能被判无效。'},
+  {k:'轻化工大类', dirs:{'工学':'轻工类、纺织类、材料类、化工与制药类'}, note:'包装工程、印刷工程等专业招生院校较少，需提前确认当年是否有计划。'},
+  {k:'食品药品与粮食大类', dirs:{'工学':'食品科学与工程类、生物工程类、化工与制药类','理学':'药学类（部分归医学）'}, note:'药品类专升本常受执业药师报考专业限制，务必核对本科专业能否报考执业资格。'},
+  {k:'交通运输大类', dirs:{'工学':'交通运输类、海洋工程类、机械类、管理科学与工程类'}, note:'航海技术、轮机工程对身体条件和证书有要求，多数院校在章程中单列。'},
+  {k:'电子与信息大类', dirs:{'工学':'计算机类、电子信息类、自动化类','管理学':'管理科学与工程类（信息管理与信息系统）'}, note:'计算机科学与技术、软件工程是热门方向，多数省份按专业对应目录限制跨类。'},
+  {k:'医药卫生大类', dirs:{'医学':'临床医学类、口腔医学类、中医学类、护理学类、药学类、医学技术类、公共卫生与预防医学类'}, note:'最严格的一类：多数省份要求专科与本科专业相同或相近；专升本学习年限不足可能影响医师/护士执业资格报考，必须提前核实。'},
+  {k:'财经商贸大类', dirs:{'经济学':'经济学类、财政学类、金融学类、经济与贸易类','管理学':'工商管理类、电子商务类、物流管理与工程类'}, note:'会计学、财务管理、电子商务报考基数大，录取分数线通常偏高。'},
+  {k:'旅游大类', dirs:{'管理学':'旅游管理类、工商管理类、公共管理类'}, note:'旅游管理、酒店管理为常见对口；部分院校要求英语或实操能力。'},
+  {k:'文化艺术大类', dirs:{'艺术学':'设计学类、美术学类、音乐与舞蹈学类、戏剧与影视学类'}, note:'艺术类多数省份需专业加试或技能测试，且只能报考艺术相关类别（如福建、浙江有明文限制）。'},
+  {k:'新闻传播大类', dirs:{'文学':'新闻传播学类、中国语言文学类','艺术学':'戏剧与影视学类（广播电视编导等）'}, note:'网络与新媒体、广播电视学为常见方向，注意部分院校文理兼收条件。'},
+  {k:'教育与体育大类', dirs:{'教育学':'教育学类、体育学类','文学':'中国语言文学类（部分院校）'}, note:'学前教育、小学教育是最热门方向之一，竞争激烈；部分省份要求教师资格或技能测试。'},
+  {k:'公安与司法大类', dirs:{'法学':'法学类、公安学类、政治学类'}, note:'公安类院校专业多需政审、体检、面试，且招生计划单列；司法警务等专业跨考限制较多。'},
+  {k:'公共管理与服务大类', dirs:{'管理学':'公共管理类、工商管理类、图书情报与档案管理类','法学':'社会学类、政治学类'}, note:'人力资源管理、行政管理为常见对口；注意部分院校限招文科类考生。'}
+];
+
+/* =========================================================
+   渲染：省份
+   ========================================================= */
+const plistEl = document.getElementById('plist');
+const pdetailEl = document.getElementById('pdetail');
+let curProv = PROVS[0].id;
+
+function renderList(filter){
+  const f = (filter||'').trim();
+  plistEl.innerHTML = '';
+  PROVS.forEach(p=>{
+    const b = document.createElement('button');
+    b.className = 'pbtn';
+    b.type = 'button';
+    b.textContent = p.name;
+    b.dataset.id = p.id;
+    b.setAttribute('role','tab');
+    b.setAttribute('aria-selected', p.id===curProv ? 'true':'false');
+    if(f && p.name.indexOf(f)<0 && p.id.indexOf(f.toLowerCase())<0) b.classList.add('hide');
+    b.addEventListener('click',()=>selectProv(p.id));
+    plistEl.appendChild(b);
+  });
+}
+function selectProv(id){
+  curProv = id;
+  [...plistEl.children].forEach(b=>b.setAttribute('aria-selected', b.dataset.id===id?'true':'false'));
+  renderDetail();
+}
+function renderDetail(){
+  const p = PROVS.find(x=>x.id===curProv);
+  if(!p) return;
+  const subjHtml = p.subj.map(s=>`<li>${s}</li>`).join('');
+  const srcHtml = p.src.map(s=>`<li><a href="${s.u}" target="_blank" rel="noopener">${s.t}</a><span class="no">　${s.o}${s.d?' · '+s.d:''}</span></li>`).join('');
+  pdetailEl.innerHTML = `
+    <div class="d-head">
+      <div class="top">
+        <h3>${p.name}</h3>
+        <span class="chip">2026 年官方文件</span>
+        <span class="chip gray">${p.src.length} 份原始文件</span>
+      </div>
+      <div class="term">本省称谓：${p.term}</div>
+      <div class="kpis">
+        <div class="kpi"><div class="k">报名时间</div><div class="v">${p.reg}</div></div>
+        <div class="kpi"><div class="k">考试时间</div><div class="v">${p.exam}</div></div>
+        <div class="kpi"><div class="k">总分</div><div class="v">${p.total}</div></div>
+      </div>
+    </div>
+    <div class="d-body">
+      <div class="row"><div class="k">考试科目</div><div class="v"><ul>${subjHtml}</ul></div></div>
+      <div class="row"><div class="k">志愿设置</div><div class="v">${p.vol}</div></div>
+      <div class="row"><div class="k">免试 / 专项</div><div class="v">${p.free}</div></div>
+      <div class="row"><div class="k">报考限制</div><div class="v">${p.limit}</div></div>
+      <div class="row"><div class="k">其他要点</div><div class="v">${p.note}</div></div>
+      <div class="srcbox">
+        <div class="t">原文出处</div>
+        <ol>${srcHtml}</ol>
+      </div>
+      <p class="emptynote">以上为 2026 年文件摘录。下一轮政策请在你报考当年 10 月起关注本省教育考试院官网，科目分值、招生院校、专项计划均可能调整。</p>
+    </div>`;
+}
+renderList('');
+renderDetail();
+document.getElementById('psearch').addEventListener('input', e=>renderList(e.target.value));
+document.getElementById('psearch').addEventListener('keydown', e=>{
+  if(e.key==='Enter'){
+    const first = [...plistEl.children].find(b=>!b.classList.contains('hide'));
+    if(first) selectProv(first.dataset.id);
+  }
+});
+
+/* =========================================================
+   渲染：专业大类
+   ========================================================= */
+const mlistEl = document.getElementById('mlist');
+const moutEl = document.getElementById('mout');
+function renderMajorList(){
+  MAJORS.forEach((m,i)=>{
+    const b=document.createElement('button');
+    b.className='mbtn'; b.type='button'; b.textContent=m.k;
+    b.setAttribute('aria-pressed', i===0?'true':'false');
+    b.addEventListener('click',()=>{
+      [...mlistEl.children].forEach(x=>x.setAttribute('aria-pressed','false'));
+      b.setAttribute('aria-pressed','true');
+      renderMajor(i);
+    });
+    mlistEl.appendChild(b);
+  });
+}
+function renderMajor(i){
+  const m = MAJORS[i];
+  const groups = Object.entries(m.dirs).map(([k,v])=>`
+    <div class="mgroup"><div class="gk">可报本科门类 · ${k}</div>
+      <div class="tags">${v.split('、').map(x=>`<span class="tagp">${x}</span>`).join('')}</div>
+    </div>`).join('');
+  moutEl.innerHTML = `
+    <h4>${m.k}</h4>
+    <p class="lead">按《职业教育专业目录（2021 年）》归类，下面是常见的本科专业方向</p>
+    ${groups}
+    <div class="warnline">提示：${m.note}</div>
+    <p class="emptynote">报考资格的最终依据是你所在省当年发布的《本专科专业对应（指导）目录》，各省细则不同——例如湖南、陕西要求“填报专业不符合目录要求的为无效志愿”，浙江跨类别填报无效。</p>`;
+}
+renderMajorList();
+renderMajor(0);
+
+/* =========================================================
+   资格自测
+   ========================================================= */
+const state = {grade:null, sys:null, id:null, goal:null};
+const qbox = document.getElementById('qbox');
+const resultEl = document.getElementById('result');
+qbox.addEventListener('click', e=>{
+  const btn = e.target.closest('.opt');
+  if(!btn) return;
+  const q = btn.closest('.q').dataset.q;
+  [...btn.parentElement.children].forEach(b=>b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true');
+  state[q] = btn.dataset.v;
+  updateResult();
+});
+
+function updateResult(){
+  const {grade, sys, id, goal} = state;
+  let main = null, mainName='', mainNote='', alt='', altNote='', flag='', todos=[];
+
+  if(!grade || !id || !goal){
+    resultEl.innerHTML = `<h4>自测结果</h4>
+      <p style="font-size:14px;color:var(--muted);line-height:1.8">
+      请依次选择：<b>年级</b> → <b>身份</b> → <b>目标</b>${sys?'':'（学制可选，用于生成时间表）'}。<br>
+      结果会随选择实时更新，不需要点“提交”。</p>
+      <div class="flagnote">判断依据是各省招生对象与免试条款：统招专升本绝大多数只面向<b>应届专科毕业生</b>，且一生只能参加一次。</div>`;
+    return;
+  }
+
+  /* 身份优先 */
+  if(id==='vet'){
+    mainName='普通高校专升本 · 退役大学生士兵免试通道';
+    mainNote='免的是文化课，不是考核。多数省份仍须参加高校组织的综合考查或职业技能综合测试（湖北、河南、福建、陕西、四川均有明文）。';
+    alt='备选：如免试未录取，部分省份允许转为普通考生身份参加统考（如安徽、福建有转换规则），需在报名阶段确认。';
+    flag='注意：录取后未报到、自行放弃入学资格的，此后不再享受免试专升本政策（湖北、福建有明确表述）。';
+    todos=['确认入伍地、退役时间是否落在本省文件规定的范围内（多数要求“从本省应征入伍”）',
+           '准备身份证、入伍通知书、退役证、专科毕业证/学籍验证报告——往年材料不齐是退档主因',
+           '查本省“免试专升本实施办法”，确认综合考查形式、时间和是否单独填报志愿',
+           '若荣立个人三等功及以上，多数省份可免考查，但须提交立功证书并公示'];
+  } else if(id==='skill'){
+    mainName='普通高校专升本 · 技能大赛获奖免试 / 单列通道';
+    mainNote='各省口径差异最大：安徽对国赛二等奖以上“免试就学”、省赛一等奖“免公共课+面试录取”；湖北、湖南设竞赛免试计划；福建把获奖考生单列录取并折算赋分；江苏获奖者仍需参加统考但可录取本科。';
+    alt='备选：你的获奖等级如果只够部分省份的“免公共课”，仍要准备专业课或面试。';
+    flag='关键：获奖赛项必须与报考专业对应，跨赛项、跨专业申请通常无效（湖北、湖南明确）。';
+    todos=['核对奖项层级与名称：世界职业院校技能大赛 / 全国职业院校技能大赛 / 中国国际大学生创新大赛 / 中华人民共和国职业技能大赛 / 省赛',
+           '向学校教务或创新创业部门调取获奖证书原件与获奖通知（认定看原始证明材料）',
+           '查本省文件中的“免试专业与赛项对应关系”，确认你的赛项能报哪些专业',
+           '注意申报截止时间往往早于普通报名，很多省份要求 3 月前完成申报与公示'];
+  } else if(id==='base'){
+    mainName='普通高校专升本 · 基层服务项目人员通道（仅部分省份）';
+    mainNote='重庆明确：参加“三支一扶”、西部计划等服务期满且考核合格后 2 年内的往届毕业生，可按应届生待遇报考；河北单列“基层服务项目人员”类别。其他多数省份未开放此通道。';
+    alt='备选：若本省无此通道，只能走成考、自考等非全日制路径。';
+    flag='务必确认你的服务项目名称、服务期起止、考核结论是否在文件列举范围内。';
+    todos=['查本省文件是否列举“基层服务项目人员”，以及是否要求服务期满+考核合格',
+           '准备服务协议、期满证明、考核合格证明原件',
+           '确认报名时段是否与应届生不同（河北对这类考生单设报名与审核阶段）',
+           '若本省不支持，转向自考/成考，别在统招上耗时间'];
+  } else {
+    mainName='普通高校专升本（统招 · 全日制）';
+    if(grade==='1'){ mainNote='你还有完整的准备周期。大一开始把英语和高等数学（或大学语文）打牢，是这类考试性价比最高的投入。'; }
+    else if(grade==='2'){ mainNote='大二是关键分水岭：本省政策、目标院校、专业对照目录要在这一年定下来，然后进入系统复习。'; }
+    else if(grade==='3'){ mainNote='应届年是唯一窗口（多数省份只招应届）。此刻应已完成报名与志愿，进入冲刺和专业课准备阶段。'; }
+    else { mainNote='已毕业者：多数省份不接受往届生报考普通专升本（广东等少数省份对户籍与社保有特殊规定）。若已错过，全日制路径基本关闭。'; }
+    alt='并行备选：自考专升本可在专科在读期间同步准备，与统招不冲突，作为兜底。';
+    flag='硬规则：一生只能参加一次普通专升本考试；报名后未参加或录取未报到，通常也会消耗这次机会（湖北明确含“已录取未报到”）。';
+    todos = grade==='0'
+      ? ['核实本省是否允许往届生报考（广东要求户籍连续满 3 年等）','如已无统招机会，直接规划自考/成考，别被“补录”“内部名额”话术带走','若目标是考公考编，注意岗位对“全日制”的要求差异']
+      : ['查你所在省份的最新文件，抄下三个日期：报名开始、缴费截止、考试日期',
+         '查《本专科专业对应目录》，锁定 2—3 个可报本科专业',
+         '确认自己有没有硬性前置条件缺失：计算机等级证书（江苏）、处分是否解除、重修是否合格',
+         '把英语作为长线科目每天固定投入，它是几乎所有省份的必考或高频科目'];
+  }
+
+  if(goal==='work' && id==='normal'){
+    mainName='自学考试 / 成人高考（非全日制）';
+    mainNote='如果你的首要目标是“边工作边拿本科”，统招专升本需要全日制在校 2 年，与工作冲突。自考无入学考试、可自行安排进度；成考需参加全国统考、以函授/业余形式学习。';
+    alt='但如果你还能接受在校 2 年，统招仍是唯一能拿到全日制本科的路径，含金量差距明显。';
+    flag='注意机构话术：把自考/成考包装成“专升本包过”很常见。请直接问一句“毕业证是普通高等学校毕业证书还是成人/自考毕业证书”。';
+    todos=['明确用途：考公考编、职称、考研、落户——不同用途对“全日制”的要求不同',
+           '自考：查本省教育考试院自学考试专业计划，确认课程门数与主考院校',
+           '成考：关注每年 8—9 月报名、10 月统考的时间规律',
+           '无论哪条路，学位证通常需额外满足平均分与学位英语要求，别只盯毕业证'];
+  }
+
+  resultEl.innerHTML = `
+    <h4>自测结果</h4>
+    <div class="pick"><div class="k">主推路径</div><div class="v">${mainName}</div><div class="n">${mainNote}</div></div>
+    <div class="pick" style="border-left-color:var(--faint)"><div class="k">备选 / 兜底</div><div class="v" style="font-size:14.5px;font-weight:600">${alt}</div></div>
+    ${flag?`<div class="flagnote">${flag}</div>`:''}
+    <h4 style="margin-top:18px">接下来 30 天</h4>
+    <ul class="todo">${todos.map((t,i)=>`<li><span class="n">${i+1}</span><div>${t}</div></li>`).join('')}</ul>`;
+}
+updateResult();
+
+/* =========================================================
+   时间表
+   ========================================================= */
+const ysel = document.getElementById('yselect');
+const ssel = document.getElementById('sselect');
+const tlEl = document.getElementById('timeline');
+const hintEl = document.getElementById('examHint');
+const nowY = new Date().getFullYear();
+for(let y=nowY-3; y<=nowY+2; y++){
+  const o=document.createElement('option'); o.value=y; o.textContent=y+' 年入学';
+  if(y===nowY-1) o.selected=true;
+  ysel.appendChild(o);
+}
+function buildPlan(){
+  const y = +ysel.value, sys = +ssel.value, examYear = y+sys;
+  hintEl.textContent = `→ 应届年（${examYear} 年）3—4 月考试，${examYear} 年 9 月入读本科`;
+  const head = [
+    {w:`${y} 年 9 月`, t:'入学第一个月：把“专业”和“专升本”绑在一起看', h:'查本省《本专科专业对应目录》，确认你的专科专业能报哪些本科专业。这一步决定后面所有选择，越早越好。', key:false},
+    {w:`${y} 年 10—12 月`, t:'英语开始长线积累', h:'英语是绝大多数省份的必考科目（山东、浙江、江苏、安徽、河南、湖北、四川、江西、陕西、重庆均考）。每天固定 40 分钟，比临考突击有效得多。', key:false}
+  ];
+  const mid2 = [
+    {w:`${examYear} 年 1—3 月`, t:'报名、志愿、缴费（最容易翻车的环节）', h:'广东 1 月中旬、四川 1 月上旬、江西 1 月上旬、江苏 1 月上旬、重庆 1 月中下旬、湖南 3 月上旬、河北 3 月初、陕西 3 月上旬、浙江 3 月中、山东 3 月中、湖北 3 月中、安徽 3 月下旬。逾期一律不补报名。', key:true},
+    {w:`${examYear} 年 3—4 月`, t:'统一考试', h:'各省集中在 3 月下旬到 4 月中旬：江西、山东、福建、广东为 3 月底；陕西 4 月 11 日；四川 4 月 16—17 日；湖北 4 月 17 日；河北、安徽、浙江为 4 月 18 日。', key:true},
+    {w:`${examYear} 年 4—5 月`, t:'查分、志愿/征集志愿、录取', h:'湖南按总分 1:1 投档并于 5 月下旬设征集志愿；湖北第一轮未录取可补录；江西 4 月底前完成录取；福建获奖考生 7 月底至 8 月初单独录取。', key:false},
+    {w:`${examYear} 年 7 月 31 日前`, t:'必须拿到专科毕业证', h:'湖北、江西等省明确：届时未取得专科毕业证书的，取消录取资格。挂科、论文、实习材料都要提前清干净。', key:true},
+    {w:`${examYear} 年 9 月`, t:'入读本科三年级', h:'学制 2 年（本科 5 年制专业 3 年）；不得转专业、转学，不得非全日制就读；毕业证标注“专科起点本科学习”。', key:false}
+  ];
+  let body;
+  if(sys===3){
+    body = [
+      {w:`${y} 年 12 月—${y+1} 年 2 月`, t:'确定考“公共课型”还是“公共课+专业课型”', h:'山东考 4 门公共课共 400 分；安徽、江西、福建为“公共课统考+专业课（或专业综合）”；湖北、湖南是英语/公共课统考+高校自命题。据此决定要不要提前学专业课。', key:false},
+      {w:`${y+1} 年 3—6 月`, t:'锁定 2—3 所目标院校，读它们的招生章程', h:'专业课考纲、参考书、加试、身体条件限制只写在院校章程里；同时留意上年是否有院校停招——每年都有变动。', key:false},
+      {w:`${y+1} 年 7—8 月`, t:'补齐硬性前置条件', h:'江苏要全国计算机等级考试一级及以上证书；有处分的须在报名前正式解除；有重修/补考的须在考试前全部合格（重庆、河南明文）。', key:false},
+      {w:`${y+1} 年 9—12 月`, t:'第一轮系统复习；部分省份此时就开始报名', h:'河南艺术类 10 月底、非艺术类 11 月报名，福建 12 月下旬报名——这是全国报名最早的时间窗，务必盯本省考试院。', key:false},
+      {w:`${y+2} 年 3—12 月`, t:'第二轮强化：真题与专业课', h:'公共课进入刷题与限时训练；确认目标院校当年是否公布考纲调整、参考书变更。此时不该再换专业方向。', key:false}
+    ];
+  } else {
+    body = [
+      {w:`${y} 年 12 月—${y+1} 年 2 月`, t:'提前定方向（两年制时间紧，别拖）', h:'两年制只剩一次应届机会，入学第一学期就要确定类别与目标院校，第二学期直接进入复习。', key:false},
+      {w:`${y+1} 年 3—8 月`, t:'系统复习 + 补齐前置条件', h:'公共课打底、专业课按院校章程准备；同期处理计算机等级证书、处分解除、重修补考。', key:false},
+      {w:`${y+1} 年 9—12 月`, t:'冲刺阶段；部分省份此时就报名', h:'河南艺术类 10 月底、非艺术类 11 月报名；福建 12 月下旬报名。', key:false}
+    ];
+  }
+  const items = [...head, ...body, ...mid2];
+  tlEl.innerHTML = items.map(it=>`
+    <div class="tli ${it.key?'key':''}">
+      <div class="when">${it.w}</div>
+      <div class="what">${it.t}</div>
+      <div class="how">${it.h}</div>
+    </div>`).join('');
+}
+ysel.addEventListener('change', buildPlan);
+ssel.addEventListener('change', buildPlan);
+buildPlan();
+
+/* =========================================================
+   来源清单
+   ========================================================= */
+const srcWrap = document.getElementById('srclist');
+srcWrap.innerHTML = `
+  <div class="sbox">
+    <div class="h"><span class="n">国</span>教育部 · 母文件</div>
+    <ol>
+      <li><a href="http://www.moe.gov.cn/" target="_blank" rel="noopener">关于做好 2026 年普通高等学校专升本考试招生工作的通知</a><span class="meta">教育部高校学生司 · 教学司函〔2025〕53 号 · 各省文件的共同依据</span></li>
+      <li><a href="http://www.chsi.com.cn/" target="_blank" rel="noopener">学信网 · 学籍学历查询与在线验证报告</a><span class="meta">中国高等教育学生信息网 · 报名与资格审核的通用凭证来源</span></li>
+    </ol>
+  </div>
+  ${PROVS.map(p=>`
+    <div class="sbox">
+      <div class="h"><span class="n">${p.name}</span>${p.term}</div>
+      <ol>${p.src.map(s=>`<li><a href="${s.u}" target="_blank" rel="noopener">${s.t}</a><span class="meta">${s.o}${s.d?' · '+s.d:''}</span></li>`).join('')}</ol>
+    </div>`).join('')}
+`;
+
+/* =========================================================
+   导航高亮
+   ========================================================= */
+const navLinks = [...document.querySelectorAll('nav.tabs a')];
+const secs = navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){
+      const id = '#'+en.target.id;
+      navLinks.forEach(a=>a.classList.toggle('on', a.getAttribute('href')===id));
+    }
+  });
+},{rootMargin:'-45% 0px -50% 0px', threshold:0});
+secs.forEach(s=>io.observe(s));
+
+/* =========================================================
+   站头检索：定位到省份细则
+   ========================================================= */
+(function(){
+  const form = document.getElementById('qform');
+  const inp  = document.getElementById('qinput');
+  if(!form || !inp) return;
+  function run(){
+    const q = (inp.value||'').trim();
+    if(!q) return;
+    const tokens = q.split(/[\s,，、]+/).filter(Boolean);
+    const btns = [...document.querySelectorAll('#plist .pbtn')];
+    const hit = btns.find(b=>tokens.includes(b.textContent.trim()))
+             || btns.find(b=>q.includes(b.textContent.trim()));
+    const ps = document.getElementById('psearch');
+    if(hit){
+      if(ps){ ps.value=''; ps.dispatchEvent(new Event('input')); }
+      hit.click();
+    }else if(ps){
+      ps.value = q; ps.dispatchEvent(new Event('input'));
+    }
+    const t = document.getElementById('prov');
+    const y = t.getBoundingClientRect().top + window.scrollY - 56;
+    window.scrollTo({top:y, behavior:'smooth'});
+  }
+  form.addEventListener('submit', e=>{ e.preventDefault(); run(); });
+})();
+</script>
+</body>
+</html>
